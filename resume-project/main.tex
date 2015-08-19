@@ -1,0 +1,255 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.1 (30/4/2015)
+%
+% Original author:
+% Sairam Sanapureddy (http://sairamprasad999.github.io)
+%
+% Original repository:
+% https://github.com/sairamprasad999/Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[]{deedy-resume-openfont}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\namesection{Sairam}{Sanapureddy}
+{ %\urlstyle{same}\url{http://debarghyadas.com} \\
+\href{mailto:ss2644@cornell.edu}{ss2644@cornell.edu} | 607.386.0131
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{Cornell University}
+\descript{MEng in Computer Science}
+\location{Expected Dec 2015 | Ithaca, NY \\ Cum. GPA: 3.85}
+\sectionsep
+
+\subsection{M.S.Ramaiah Inst of Tech}
+\descript{BEng in Computer Science}
+\location{Jun 2014 | Bangalore, INDIA \\ Cum. GPA: 3.8}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Github:// \href{https://github.com/sairamprasad999}{\custombold{sairamprasad999}} \\
+LinkedIn://  \href{https://www.linkedin.com/in/sairamprasadreddy}{\custombold{sairamprasadreddy}} \\
+%Twitter://  \href{https://twitter.com/sairamprasad999}{\custombold{@sairamprasad999}} \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Graduate}
+Introduction to Databases(CS 5320)\\
+The Architecture of Large Scale Information Systems(CS 5300)\\
+Introduction to NLP(CS 5740)\\
+Machine Learning(CS 5780)\\
+Visual Data Analytics for Web(INFO 5100)\\
+Operating Systems + Practicum(CS 4410)\\
+Software Engineering(CS 5150)\\
+Data Mining(STSCI 4740)\\
+Entrepreneurship for Engineers(ORIE 4152)\\
+
+\sectionsep
+
+\subsection{Undergraduate}
+Algorithms and Data Structures\\
+Object Oriented Programming\\
+Systems Programming \\
+Discrete Structures\\
+Networks\\
+Compilers\\
+
+\sectionsep
+
+\subsection{moocs}
+Principles of Computing\\
+Programming Handheld Applications with Android\\
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\location{Over 5000 lines:}
+Java \textbullet{}  JavaScript \textbullet{} Python \textbullet{} C \\
+
+\location{Over 1000 lines:} 
+C++\textbullet{} PHP \\
+\location{Familiar:}
+HTML5 \textbullet{} CSS3 \textbullet{} Android \textbullet{} SQL\textbullet{} JQuery\textbullet{} D3 \textbullet{} Bootstrap \textbullet{}JSP \textbullet{}AWS\textbullet{}Map-Reduce\textbullet{} Linux
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{PROJECTS}
+
+\runsubsection{Fast Convergence Page Rank Using AWS Elastic Map Reduce and Hadoop}
+\descript{| CS 5300}
+\location{Apr 2015 | Ihaca, NY}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Computed Page Rank for a large Web graph (685230 nodes, 7600595 edges) using AWS Elastic Map Reduce, Java and Hadoop.
+\item Increased Convergence of Page Rank using Jacobi's Block Page Rank method on partitioned graph.Improved performance by using Gauss Seidel method.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{A K-Resilient, Scalable and Available Distributed Session Management Service}
+\descript{| CS 5300}
+\location{Mar 2015 | Ihaca, NY}
+%\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+\item Implemented a Scalable and Available Distributed in-memory Session Management Service which is resilient to failure of K nodes.
+\item Designed and developed custom Remote Procedure Calls and Gossip Protocol using Java.Leveraged AWS Elastic Beanstalk, SimpleDB and Java Servlets.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Question Answering System}
+\descript{| CS 5740}
+\location{Apr 2015 | Ithaca, NY}
+\begin{tightemize}
+\item Designed, Implemented and Evaluated a Question Answering System to answer factoid questions. 
+\item Leveraged several off the shelf Natural Language Processing tool-kits like Stanford Core NLP, NLTK and Apache Lucene.
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Social  Power Relationship Prediction}
+\descript{| CS 5740}
+\location{Mar 2015 | Ithaca, NY}
+\begin{tightemize}
+\item Applied n-gram models, smoothing techniques  to guess whether an email is being sent from lower rank to higher rank employee or vice versa based on the content of the email using Java.
+\end{tightemize}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{EXPERIENCE}
+\runsubsection{Cornell University}
+\descript{| graduate teaching assistant}
+\location{Aug 2015 – Present | Ithaca, NY}
+Presently working as a member of course staff for Introduction to Natural Language Processing (CS 4740) under Professor Claire Cardie.
+\sectionsep
+
+\runsubsection{Informatica}
+\descript{| software development intern}
+\location{May 2015 – Aug 2015 | Redwood City, CA}
+Worked with Informatica Cloud Services team to develop Data Preview feature for Data Wizard Application. Also worked on a Internal Project Management tool with dashboards using HTML, CSS, Bootstrap, JS, JQuery, D3, Java, JSP and MySQL.
+\sectionsep
+
+\runsubsection{Cisco}
+\descript{| undergraduate intern}
+\location{Jan 2014 – Jul 2014 | Bangalore, INDIA}
+Designed and developed a generic test automation framework that can be used to perform scale tests and performance tests of service provider network test-beds using Python and Cisco proprietary APIS.
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards} 
+\begin{tabular}{rll}
+2014	     & University  & Best Outgoing Student\\
+2013	     & National  & Instituition of Engineers India Grant-in-aid (10/200 entries)\\
+2010     & National & Comp. Soc. of India's National Programming Contest\\
+\end{tabular}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     ACTIVITIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%Commenting activities to make room for one more project
+%\section{Activities} 
+
+%\begin{tabular}{rll}
+%2015   &  University & Cornell SENSE\\
+%2014   &  State & Member of Organizing committee of University's technical fest\\
+%\end{tabular}
+%\sectionsep
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
